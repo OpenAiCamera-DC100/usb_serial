@@ -4,8 +4,8 @@ case "$1" in
 	start)
 		printf "usbserial.ko modules: "
 		insmod /lib/modules/usbserial.ko vendor=0x04b4 product=0x02f8
-        cmos_get_lux &
-        cmos_netserver_test &
+        #cmos_get_lux &
+        #cmos_netserver_test &
 		[ $? = 0 ] && echo "OK" || echo "FAIL"
 
 		;;
